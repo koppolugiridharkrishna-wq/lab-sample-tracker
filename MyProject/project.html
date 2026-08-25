@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Sample Tracker</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <div class="container">
+  <h1>🧪 Lab Sample Tracker</h1>
+
+  <div class="form-card">
+    <div class="form-row">
+      <div>
+        <label for="sampleName">Sample Name</label>
+        <input type="text" id="sampleName" placeholder="e.g. Blood-045">
+      </div>
+      <div>
+        <label for="sampleType">Sample Type</label>
+        <input type="text" id="sampleType" placeholder="e.g. Blood, Tissue">
+      </div>
+      <div>
+        <label for="collectedDate">Date Collected</label>
+        <input type="date" id="collectedDate">
+      </div>
+      <div>
+        <label for="statusSelect">Status</label>
+        <select id="statusSelect">
+          <option value="pending">Pending</option>
+          <option value="tested">Tested</option>
+          <option value="completed">Completed</option>
+        </select>
+      </div>
+      <div>
+        <button onclick="addSample()">Add Sample</button>
+      </div>
+    </div>
+    <div class="error-msg" id="errorMsg">⚠ Please fill in Sample Name, Type, and Date.</div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Sample Name</th>
+        <th>Type</th>
+        <th>Date Collected</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+    <tbody id="sampleTableBody"></tbody>
+  </table>
+  <div class="empty-state" id="emptyState">No samples added yet. Add your first sample above.</div>
+</div>
+
+<script src="project.js"></script>
+
+    
+</body>
+</html>
